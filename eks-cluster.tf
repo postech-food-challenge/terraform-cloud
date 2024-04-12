@@ -1,5 +1,5 @@
-resource "aws_eks_cluster" "food-challenge" {
-  name     = "food-challenge"
+resource "aws_eks_cluster" "tech-challenge-cluster" {
+  name     = "tech-challenge-cluster"
   role_arn = var.awsAcademyRole 
 
   vpc_config {
