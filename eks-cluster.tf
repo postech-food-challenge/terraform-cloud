@@ -8,6 +8,6 @@ resource "aws_eks_cluster" "tech-challenge-cluster" {
   }
 
   access_config {
-    authentication_mode = "CONFIG_MAP"
+    authentication_mode = "API_AND_CONFIG_MAP"
   }
 }
