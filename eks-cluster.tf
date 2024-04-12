@@ -1,10 +1,10 @@
-resource "aws_eks_cluster" "food-challenge" {
-  name     = "food-challenge"
-  role_arn = vars.awsAcademyRole 
+resource "aws_eks_cluster" "tech-challenge-cluster" {
+  name     = "tech-challenge-cluster"
+  role_arn = var.awsAcademyRole 
 
   vpc_config {
-    subnet_ids = ["${vars.subnetA}", "${vars.subnetB}", "${vars.subnetC}"]
-    security_group_ids = ["${vars.securityGroupId}"]
+    subnet_ids = ["${var.subnetA}", "${var.subnetB}", "${var.subnetC}"]
+    security_group_ids = ["${var.securityGroupId}"]
   }
 
   access_config {
