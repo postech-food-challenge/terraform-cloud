@@ -1,9 +1,9 @@
 resource "aws_eks_cluster" "tech_challenge_cluster" {
   name     = "tech-challenge-cluster"
-  role_arn = var.awsAcademyRole 
+  role_arn = var.awsAcademyRole
 
   vpc_config {
-    subnet_ids = ["${var.subnetA}", "${var.subnetB}", "${var.subnetC}"]
+    subnet_ids         = ["${var.subnetA}", "${var.subnetB}", "${var.subnetC}"]
     security_group_ids = ["${var.securityGroupId}"]
   }
 
@@ -25,6 +25,24 @@ resource "aws_eks_access_policy_association" "tech_challenge_cluster_access_entr
   principal_arn = var.eksAccessEntryPrincipalArn
 
   access_scope {
-    type       = "cluster"
+    type = "cluster"
+  }
+}
+
+resource "aws_eks_node_group" "food_challenge" {
+  cluster_name    = aws_eks_cluster.tech_challenge_cluster.name
+  node_group_name = "food-challenge"
+  node_role_arn   = var.awsAcademyRole
+  subnet_ids      = ["${var.subnetA}", "${var.subnetB}", "${var.subnetC}"]
+  instance_types  = ["t3.micro"]
+
+  scaling_config {
+    desired_size = 1
+    max_size     = 2
+    min_size     = 1
+  }
+
+  update_config {
+    max_unavailable = 1
   }
 }
