@@ -1,23 +1,23 @@
 variable "awsAcademyRole" {
-    default = "arn:aws:iam::989852711339:role/LabRole"
+  default = "arn:aws:iam::989852711339:role/LabRole"
 }
 
 variable "subnetA" {
-    default = "subnet-035a77ec1c1eeb58f"
+  default = "subnet-035a77ec1c1eeb58f"
 }
 
 variable "subnetB" {
-    default = "subnet-02e96c46ee65f9fc2"
+  default = "subnet-02e96c46ee65f9fc2"
 }
 
 variable "subnetC" {
-    default = "subnet-0cc33249c65d358d2"
+  default = "subnet-0cc33249c65d358d2"
 }
 
 variable "securityGroupId" {
-    default = "sg-0d3c5e7ecb8646b54"
+  default = "sg-0d3c5e7ecb8646b54"
 }
 
 variable "eksAccessEntryPrincipalArn" {
-    default = "arn:aws:iam::989852711339:role/voclabs"
+  default = "arn:aws:iam::989852711339:role/voclabs"
 }
