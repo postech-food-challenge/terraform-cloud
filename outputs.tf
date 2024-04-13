@@ -1,5 +1,13 @@
-output "endpoint" {
+output "eks-cluster-endpoint" {
   value = aws_eks_cluster.tech_challenge_cluster.endpoint
+}
+
+output "rds-host" {
+  value = aws_db_instance.food_challenge.address
+}
+
+output "rds-port" {
+  value = aws_db_instance.food_challenge.port
 }
 
 output "kubeconfig-certificate-authority-data" {
