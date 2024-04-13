@@ -1,7 +1,7 @@
 resource "aws_db_instance" "food_challenge" {
   allocated_storage      = 10
   db_name                = "foodchallenge"
-  engine                 = "aurora-postgresql"
+  engine                 = "postgresql"
   instance_class         = "db.t3.micro"
   identifier             = "rds"
   username               = "foodchallenge"
