@@ -18,6 +18,6 @@ variable "securityGroupId" {
   default = "sg-0d3c5e7ecb8646b54"
 }
 
-variable "eksAccessEntryPrincipalArn" {
+variable "principalArn" {
   default = "arn:aws:iam::989852711339:role/voclabs"
 }
