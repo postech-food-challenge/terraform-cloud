@@ -18,7 +18,7 @@ resource "aws_db_instance" "food_challenge" {
   skip_final_snapshot    = true
   apply_immediately      = true
   publicly_accessible    = false
-  deletion_protection    = true
+  deletion_protection    = false
   vpc_security_group_ids = [var.securityGroupId]
   db_subnet_group_name   = aws_db_subnet_group.subnet-rds.id
   tags = {
