@@ -8,7 +8,7 @@ resource "aws_db_instance" "food_challenge" {
   engine                 = "postgresql"
   engine_version         = "16.10"
   instance_class         = "db.t3.micro"
-  storage_type           = "gps"
+  storage_type           = "gp2"
   allocated_storage      = 20
   max_allocated_storage  = 30
   identifier             = "food-challenge"
