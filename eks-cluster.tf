@@ -34,11 +34,11 @@ resource "aws_eks_node_group" "food_challenge" {
   node_group_name = "food-challenge"
   node_role_arn   = var.awsAcademyRole
   subnet_ids      = ["${var.subnetA}", "${var.subnetB}", "${var.subnetC}"]
-  instance_types  = ["t3.micro"]
+  instance_types  = ["t3.medium"]
 
   scaling_config {
     desired_size = 1
-    max_size     = 2
+    max_size     = 3
     min_size     = 1
   }
 
