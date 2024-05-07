@@ -19,7 +19,7 @@ resource "aws_db_instance" "food_challenge" {
   apply_immediately      = true
   publicly_accessible    = false
   deletion_protection    = false
-  vpc_security_group_ids = [var.securityGroupId, aws_eks_cluster.tech_challenge_cluster.vpc_config.cluster_security_group_id]
+  vpc_security_group_ids = [var.securityGroupId, aws_eks_cluster.tech_challenge_cluster.vpc_config[0].cluster_security_group_id]
   db_subnet_group_name   = aws_db_subnet_group.subnet-rds.id
   tags = {
     Name = "rds"
