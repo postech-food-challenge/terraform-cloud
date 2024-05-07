@@ -4,7 +4,6 @@ resource "aws_eks_cluster" "tech_challenge_cluster" {
 
   vpc_config {
     subnet_ids         = ["${var.subnetA}", "${var.subnetB}", "${var.subnetC}"]
-    security_group_ids = ["${var.securityGroupId}"]
   }
 
   access_config {
