@@ -3,7 +3,7 @@ resource "aws_eks_cluster" "tech_challenge_cluster" {
   role_arn = var.awsAcademyRole
 
   vpc_config {
-    subnet_ids         = ["${var.subnetA}", "${var.subnetB}", "${var.subnetC}"]
+    subnet_ids = ["${var.subnetA}", "${var.subnetB}", "${var.subnetC}"]
   }
 
   access_config {
