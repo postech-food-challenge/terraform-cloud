@@ -26,16 +26,16 @@ resource "aws_db_instance" "products" {
   }
 }
 
-resource "aws_db_instance" "order" {
-  db_name                = "order"
+resource "aws_db_instance" "orders" {
+  db_name                = "orders"
   engine                 = "postgres"
   engine_version         = "16.1"
   instance_class         = "db.t3.micro"
   storage_type           = "gp2"
   allocated_storage      = 20
   max_allocated_storage  = 30
-  identifier             = "order"
-  username               = "order"
+  identifier             = "orders"
+  username               = "orders"
   password               = "root1234"
   multi_az               = false
   skip_final_snapshot    = true
@@ -45,7 +45,7 @@ resource "aws_db_instance" "order" {
   vpc_security_group_ids = [var.securityGroupId, aws_eks_cluster.tech_challenge_cluster.vpc_config[0].cluster_security_group_id]
   db_subnet_group_name   = aws_db_subnet_group.subnet-rds.id
   tags = {
-    Name = "order-rds"
+    Name = "orders-rds"
   }
 }
 
