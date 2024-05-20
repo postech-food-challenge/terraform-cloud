@@ -19,11 +19,11 @@ output "rds-port-payment-service" {
 }
 
 output "rds-host-order-service" {
-  value = aws_db_instance.order.address
+  value = aws_db_instance.orders.address
 }
 
 output "rds-port-order-service" {
-  value = aws_db_instance.order.port
+  value = aws_db_instance.orders.port
 }
 
 output "kubeconfig-certificate-authority-data" {
