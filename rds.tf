@@ -4,7 +4,7 @@ resource "aws_db_subnet_group" "subnet-rds" {
 }
 
 resource "aws_db_instance" "products" {
-  db_name                = "products-db"
+  db_name                = "products"
   engine                 = "postgres"
   engine_version         = "16.1"
   instance_class         = "db.t3.micro"
