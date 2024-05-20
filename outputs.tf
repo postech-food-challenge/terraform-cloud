@@ -18,6 +18,14 @@ output "rds-port-payment-service" {
   value = aws_db_instance.payment_service.port
 }
 
+output "rds-host-order-service" {
+  value = aws_db_instance.order.address
+}
+
+output "rds-port-order-service" {
+  value = aws_db_instance.order.port
+}
+
 output "kubeconfig-certificate-authority-data" {
   value = aws_eks_cluster.tech_challenge_cluster.certificate_authority[0].data
 }
