@@ -2,12 +2,12 @@ output "eks-cluster-endpoint" {
   value = aws_eks_cluster.tech_challenge_cluster.endpoint
 }
 
-output "rds-host-food-challenge" {
-  value = aws_db_instance.food_challenge.address
+output "rds-host-products" {
+  value = aws_db_instance.products.address
 }
 
-output "rds-port-food-challenge" {
-  value = aws_db_instance.food_challenge.port
+output "rds-port-products" {
+  value = aws_db_instance.products.port
 }
 
 output "rds-host-payment-service" {
