@@ -26,6 +26,14 @@ output "rds-port-order-service" {
   value = aws_db_instance.orders.port
 }
 
+output "rds-host-customers-service" {
+  value = aws_db_instance.customers.address
+}
+
+output "rds-port-customers-service" {
+  value = aws_db_instance.customers.port
+}
+
 output "kubeconfig-certificate-authority-data" {
   value = aws_eks_cluster.tech_challenge_cluster.certificate_authority[0].data
 }
