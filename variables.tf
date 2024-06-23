@@ -19,5 +19,5 @@ variable "securityGroupId" {
 }
 
 variable "principalArn" {
-  default = "arn:aws:iam::232311317346:role/voclabs"
+  default = "arn:aws:iam::433967764681:role/voclabs"
 }
