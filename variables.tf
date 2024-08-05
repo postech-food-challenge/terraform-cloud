@@ -1,5 +1,5 @@
 variable "awsAcademyRole" {
-  default = "arn:aws:iam::433967764681:role/LabRole"
+  default = "arn:aws:iam::482171230033:role/LabRole"
 }
 
 variable "subnetA" {
